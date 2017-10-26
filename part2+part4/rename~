@@ -1,0 +1,13 @@
+
+i=1
+for f in $(ls -1 *part3.jpg); do
+	echo $f
+	
+	command="$(printf "mv -i %s part4.jpg" $f $i )"
+	echo $command
+	$command
+	
+	i=$((i+1))
+done
+
+
